@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Préstamos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="/png/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <h1>Calculadora de Préstamos</h1>
+        <form>
+          <div>
+            <label for="capital"
+              >CAPITAL
+              <input type="number" placeholder="Escriba aqui" id="capital" />
+              <i class="capital-i"></i>
+            </label>
+          </div>
+          <br />
+          <div>
+            <label for="couta"
+              >CUOTAS
+              <input type="number" placeholder="Escriba aqui" id="cuota" />
+              <i class="cuotas-i"></i>
+            </label>
+          </div>
+          <br />
+          <div>
+            <label for="interes"
+              >INTERES
+              <input type="number" placeholder="Escriba aqui" id="interes" />
+              <i class="interes-i"></i>
+            </label>
+          </div>
+          <br />
+        </form>
+        <button onclick="calcularPrestamo();">Calcular</button>
+      </fieldset>
+      <hr />
+      <table class="tab">
+        <thead>
+          <tr>
+            <td><b>Número</b></td>
+            <td><b>Capital</b></td>
+            <td><b>Intereses</b></td>
+            <td><b>Total a Pagar</b></td>
+          </tr>
+        </thead>
+        <tbody id="tab"></tbody>
+        <tfoot>
+          <tr>
+            <td class="ft"><b>TOTAL</b></td>
+            <td id="t1"></td>
+            <td id="t2"></td>
+            <td id="t3"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
