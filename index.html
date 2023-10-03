@@ -18,54 +18,55 @@
       <fieldset>
         <h1>Calculadora de Préstamos</h1>
         <form>
-          <div>
-            <label for="capital"
-              >CAPITAL
-              <input type="number" placeholder="Escriba aqui" id="capital" />
-              <i class="capital-i"></i>
-            </label>
+          <div class="form-group">
+            <label for="capital" name="amount"
+              ><b>Monto del préstamo </b></label
+            >
+            <span>$</span>
+            <input type="text" placeholder="Escriba aqui" id="capital" />
           </div>
           <br />
-          <div>
-            <label for="couta"
-              >CUOTAS
-              <input type="number" placeholder="Escriba aqui" id="cuota" />
-              <i class="cuotas-i"></i>
-            </label>
+          <div class="form-group">
+            <label for="cuota"><b>Cuota mensual </b></label>
+            <input type="number" placeholder="Escriba aqui" id="cuota" />
           </div>
           <br />
-          <div>
-            <label for="interes"
-              >INTERES
-              <input type="number" placeholder="Escriba aqui" id="interes" />
-              <i class="interes-i"></i>
-            </label>
+          <div class="form-group">
+            <label for="interes"><b>Interes mensual </b></label>
+            <input type="number" placeholder="Escriba aqui" id="interes" />
+            <span>%</span>
           </div>
           <br />
         </form>
-        <button onclick="calcularPrestamo();">Calcular</button>
+        <button id="button" onclick="calcularPrestamo();">Calcular</button>
       </fieldset>
       <hr />
-      <table class="tab">
-        <thead>
-          <tr>
-            <td><b>Número</b></td>
-            <td><b>Capital</b></td>
-            <td><b>Intereses</b></td>
-            <td><b>Total a Pagar</b></td>
-          </tr>
-        </thead>
-        <tbody id="tab"></tbody>
-        <tfoot>
-          <tr>
-            <td class="ft"><b>TOTAL</b></td>
-            <td id="t1"></td>
-            <td id="t2"></td>
-            <td id="t3"></td>
-          </tr>
-        </tfoot>
-      </table>
+      <div class="foot" id="foot">
+        <h1>Pagos Mensuales</h1>
+        <table class="tab">
+          <thead>
+            <div class="footd">
+              <tr>
+                <td><b>Mes</b></td>
+                <td><b>Capital</b></td>
+                <td><b>Intereses</b></td>
+                <td><b>Total a Pagar</b></td>
+              </tr>
+            </div>
+          </thead>
+          <tbody id="tab"></tbody>
+          <tfoot>
+            <tr>
+              <td class="ft"><b>TOTAL</b></td>
+              <td id="t1"></td>
+              <td id="t2"></td>
+              <td id="t3"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
