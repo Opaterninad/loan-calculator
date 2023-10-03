@@ -41,10 +41,10 @@ function calcularPrestamo() {
     document.getElementById("t2").innerHTML = interesCuota;
     document.getElementById("t3").innerHTML = totalCuota;
   } else {
-    Swal.fire({
-      icon: "error",
-      title: "Información incompleta.",
-      text: "Parece ser que falta por ingresar algún número.",
-    });
+    Swal.fire(
+      "Información incompleta",
+      "Parece ser que falta por ingresar algún número. ",
+      "question"
+    );
   }
 }
