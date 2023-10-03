@@ -2,15 +2,9 @@ document.getElementById("capital").addEventListener("input", function (event) {
   const capital1 = event.target.value.replace(/\,/g, "");
   event.target.value = capital1.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 });
-document.getElementById("button").addEventListener("click", function () {
-  var contenido = document.getElementById("foot");
-  if (contenido.style.display === "none") {
-    contenido.style.display = "block";
-  } else {
-    contenido.style.display = "block";
-  }
-});
+
 function calcularPrestamo() {
+  var contenido = document.getElementById("foot");
   let capitalPagar,
     capitalTotal,
     interesesMensuales,
@@ -23,6 +17,8 @@ function calcularPrestamo() {
   let cuota = Number(document.getElementById("cuota").value);
   let interes = Number(document.getElementById("interes").value);
   if (capital > 0) {
+    contenido.style.display === "none";
+    contenido.style.display = "block";
     for (num = 1; num <= cuota; num++) {
       capitalTotal = capital / cuota;
       capitalPagar = capitalTotal.toFixed(2);
